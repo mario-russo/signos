@@ -10,7 +10,7 @@
                 O horóscopo da semana está aqui para iluminar o seu caminho rumo ao sucesso e à realização pessoal.
             </p>
             <span class="">
-                <NuxtLink class="bg-black opacity-60 hover:bg-black-600 text-white font-bold py-3 px-8 rounded">Semanal</NuxtLink>
+                <NuxtLink class="bg-gray-800 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded">Semanal</NuxtLink>
             </span>
         </div>
     </section>

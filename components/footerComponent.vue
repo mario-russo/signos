@@ -11,19 +11,19 @@
                     </ul>
                 </div>
                 <div class="w-full md:w-1/2 lg:w-1/4 mb-4 md:mb-0">
-                    <h4 class="text-lg font-bold mb-4">Horoscopo</h4>
+                    <h4 class="text-lg font-bold mb-4">Horóscopo</h4>
                     <ul class="list-none">
-                        <li><a href="#" class="text-gray-400 hover:text-gray-200">Semanal</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-gray-200">Meu signo</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-gray-200">Diário</a></li>
+                        <li><NuxtLink to="/horoscopo/semanl" class="text-gray-400 hover:text-gray-200">Meu horóscopo da semana</NuxtLink></li>
+                        <li><NuxtLink to="/horoscopo/mensal" class="text-gray-400 hover:text-gray-200">Horóscopo do mês</NuxtLink></li>
+                        <li><NuxtLink to="/horoscopo/anual" class="text-gray-400 hover:text-gray-200">Horóscopo 2023</NuxtLink></li>
                     </ul>
                 </div>
                 <div class="w-full md:w-1/2 lg:w-1/4 mb-4 md:mb-0">
                     <h4 class="text-lg font-bold mb-4">Páginas</h4>
                     <ul class="list-none">
-                        <li><a href="#" class="text-gray-400 hover:text-gray-200">Home</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-gray-200">Sobre</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-gray-200">Contato</a></li>
+                       <li><NuxtLink to="/" class="text-gray-400 hover:text-gray-200">Home</NuxtLink></li> 
+                        <li><NuxtLink to="/horoscopo" class="text-gray-400 hover:text-gray-200">horóscopo</NuxtLink></li>
+                        <li><NuxtLink to="/caracteristica" class="text-gray-400 hover:text-gray-200">Característica</NuxtLink></li>
                     </ul>
                 </div>
             </div>

@@ -186,7 +186,7 @@ export const aquario: signo = {
     data: '20/01 - 18/02',
     nome: 'aquario',
     altImage: 'signo aguario',
-    nomeImage: 'Auquário',
+    nomeImage: 'Aquário',
     caracteristicas: [
         'Aquário é um signo conhecido pela sua originalidade, independência e espírito humanitário.',
         'São pessoas criativas, inovadoras e com uma mente aberta para novas ideias.',

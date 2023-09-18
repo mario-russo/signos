@@ -6,16 +6,23 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "test": "vitest --dom",
+    "coverage": "vitest run --coverage"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@types/node": "^18.16.19",
-    "nuxt": "^3.6.2"
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/test-utils": "^2.4.1",
+    "happy-dom": "^10.6.3",
+    "nuxt": "^3.6.2",
+    "vitest": "^0.34.1"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.11",
+    "jsdom": "^22.1.0",
     "nuxt-icon": "^0.4.2"
   }
 }

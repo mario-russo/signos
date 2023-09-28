@@ -4,7 +4,7 @@
         <section class="grid">
             <div class="max-w-4xl mx-auto py-8">
                 <div class="titulo mt-10">
-                    <img class="rounded-full h-20" src="~/public/imagem/aries.jpg" alt="Imagem do Card">
+                    <img class="rounded-full h-20" src="~/assets/img/aries.jpg" alt="Imagem do Card">
                     <h1 class="text-3xl font-bold mb-4 mt-20">Aries</h1>
                 </div>
                 <h2 class="text-xl font-semibold mb-4">Caracteristicas</h2>

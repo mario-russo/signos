@@ -20,7 +20,7 @@
                 >Seu email</label
               >
               <input
-                :v-model="login.email"
+              v-model="user.email"
                 type="email"
                 name="email"
                 id="email"
@@ -36,7 +36,7 @@
                 >Senha</label
               >
               <input
-                :v-model="login.senha"
+              v-model="user.senha"
                 type="password"
                 name="password"
                 id="password"
@@ -63,7 +63,6 @@
                   >Resgistrar</a
                 >
               </p>
-              {{ login2 }}
             </div>
           </div>
         </div>
@@ -77,19 +76,19 @@ definePageMeta({
   layout: false,
 });
 
-let login2 = {
-  senha: "1234",
-  email: "mario.russo93@hotmail.com",
+let user = {
+  senha:"",
+  email: "",
 };
 
 async function postData() {
   try {
-    const { data: response } = await useFetch("http://localhost:8080/auth/login", {
+    const { data: response } = await useFetch(useRuntimeConfig().public.baseUrl + 'auth/login', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(login2),
+      body: JSON.stringify(user),
     });
 
     if (!response.value) {

@@ -32,7 +32,7 @@
             <label
               for="nome"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >Seu nome</label
+              >Digite seu nome</label
             >
             <input
               :v-model="nome"
@@ -48,7 +48,7 @@
             <label
               for="Senha"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >Seu Senha</label
+              >Digite sua Senha</label
             >
             <input
               :v-model="senha"

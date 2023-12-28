@@ -12,15 +12,16 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@nuxtjs/tailwindcss": "^6.8.0",
+    "@nuxtjs/tailwindcss": "^6.10.1",
     "@types/node": "^18.16.19",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vue/test-utils": "^2.4.1",
     "happy-dom": "^10.6.3",
-    "nuxt": "^3.6.2",
+    "nuxt": "^3.9.0",
     "vitest": "^0.34.1"
   },
   "dependencies": {
+    "@nuxt/image": "^1.1.0",
     "@pinia/nuxt": "^0.4.11",
     "jsdom": "^22.1.0",
     "nuxt-icon": "^0.4.2"

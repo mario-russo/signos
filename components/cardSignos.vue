@@ -1,38 +1,81 @@
 <template>
-    <div>
-        <div class="pt-20 p-4 text-center">
-            <h1>Caracteristica</h1>
-            <h2>Escolha o Signo</h2>
-            <section class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-10 text-center">
-                <section v-for="(signo) in signos" :key="signo.id" class="shadow p-2" @click="">
-                    <h3>{{ signo.nomeImage }}</h3>
-                    <p class="mb-5">{{ signo.data }}</p>
-                    <NuxtLink class="cursor-pointer text-white bg-teal-400 font-bold shadow py-1 px-8  mb-5 rounded"
-                        @click="props.rota(signo.id)">Ver</NuxtLink>
-                </section>
-            </section>
-        </div>
+  <div class="container-main">
+    <div class="text-center">
+      <section class="grid-card">
+        <section
+          v-for="signo in signos"
+          :key="signo.id"
+          class="shadow p-2 card"
+          @click=""
+        >
+          <h5>{{ signo.nomeImage }}</h5>
+          <p class="mb-5">{{ signo.data }}</p>
+          <NuxtLink
+            class="cursor-pointer text-white bg-teal-400 font-bold shadow py-1 px-8 mb-5 rounded"
+            @click="props.rota(signo.id)"
+            >Ver</NuxtLink
+          >
+        </section>
+      </section>
     </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { signoStore } from '~/stores/signoStore'
+import { signoStore } from "~/stores/signoStore";
 
-const storeSigno = signoStore()
+const storeSigno = signoStore();
 
-const signos = storeSigno.signos
-const props = defineProps({rota:{type:Function, default:()=>{}}})
+const signos = storeSigno.signos;
+const props = defineProps({ rota: { type: Function, default: () => {} } });
 
-
-// function rota(signo: number) {
-
-//     useRouter().push({ path: "caracteristica/" + signo })
-// }
-
-onMounted(() => {
-})
+onMounted(() => {});
 </script>
 
 <style scoped>
 @import url("~/assets/css/tamanhoFonte.css");
+.container-main {
+  min-height: 83vh;
+  padding-top: 100px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.grid-card {
+  width: 50%;
+  gap: 5px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 800px) {
+  .grid-card {
+    width: 99%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid-card {
+    width: 100%;
+    grid-template-columns: repeat(2, 48%);
+  }
+}
+/*
+@media screen and (max-width: 800px) {
+  .card-main {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    margin: auto;
+  }
+  .card-main section {
+    width: 300px;
+  }
+}  */
 </style>

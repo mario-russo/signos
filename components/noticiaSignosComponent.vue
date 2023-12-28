@@ -23,7 +23,8 @@
 </template>
 
 <script setup lang="ts">
-import { postSigno } from 'utils/types';
+
+import type { postSigno } from '../utils/types';
 
 
 

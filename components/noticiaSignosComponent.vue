@@ -1,21 +1,15 @@
 <template>
   <div class="caixa">
     <section class="grid">
-      <div class="anuncio">
-        <h2>Seção de Anúncio</h2>
-        <p>Anúncio aqui.</p>
-      </div>
+      <div class="anuncio"></div>
       <div class="conteudo">
         <div class="">
-          <h1 class="">Horóscopo Semanal</h1>
+          <h1 class="">{{ props.titulo }}</h1>
         </div>
         <p>{{ resultado.signo }}</p>
         <p>{{ resultado.conteudo }}</p>
       </div>
-      <div class="anuncio">
-        <h2>Seção de Anúncio</h2>
-        <p>Anúncio aqui.</p>
-      </div>
+      <div class="anuncio"></div>
     </section>
   </div>
 </template>
@@ -23,6 +17,7 @@
 <script setup lang="ts">
 const props = defineProps({
   buscaDto: { type: Object },
+  titulo: { type: String },
 });
 
 const resultado = reactive<backend>({

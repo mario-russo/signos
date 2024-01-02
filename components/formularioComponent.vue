@@ -12,9 +12,9 @@
 
       <div class="row justify-content-center">
         <div class="col-xl-7 col-lg-7">
-          <form class="newsletter-form">
+          <form @click.prevent class="newsletter-form">
             <input type="email" placeholder="Enter your email..." required />
-            <button type="submit">Enviar E-mail</button>
+            <button>Enviar E-mail</button>
           </form>
         </div>
       </div>

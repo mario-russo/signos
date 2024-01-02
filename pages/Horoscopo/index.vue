@@ -8,9 +8,7 @@ function redirect() {
     <div class="caixa pt-50">
       <article class="p-10 shadow bg-green">
         <h2>Semanal</h2>
-        <p class="mb-5">
-          Descubra o horóscopo da semana: insights e previsões.
-        </p>
+        <p class="mb-5">Horóscopo da semana: insights e previsões.</p>
         <div>
           <NuxtLink
             to="/horoscopo/semanal"
@@ -56,8 +54,6 @@ function redirect() {
   align-items: center;
   min-height: 500px;
   padding-top: 100px;
-}
-.container {
   min-height: 90vh;
 }
 
@@ -72,7 +68,8 @@ function redirect() {
 }
 
 .caixa article {
-  width: 400px;
+  min-width: 33%;
+  min-height: 250px;
 }
 
 /* Estilos para dispositivos móveis (tamanhos em pixels) */
@@ -93,6 +90,4 @@ function redirect() {
 }
 
 /* Estilos para dispositivos desktop (tamanhos em pixels) */
-@media (min-width: 769px) {
-}
 </style>

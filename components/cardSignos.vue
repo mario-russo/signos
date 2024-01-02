@@ -3,12 +3,14 @@
     <div class="text-center">
       <section class="grid-card">
         <section
-          v-for="signo in signos"
+          v-for="signo in signosa"
           :key="signo.id"
           class="shadow p-2 card"
           @click=""
         >
-          <h5>{{ signo.nomeImage }}</h5>
+          <p>
+            {{ signo.nome }}
+          </p>
           <p class="mb-5">{{ signo.data }}</p>
           <NuxtLink
             class="cursor-pointer text-white bg-teal-400 font-bold shadow py-1 px-8 mb-5 rounded"
@@ -22,12 +24,9 @@
 </template>
 
 <script setup lang="ts">
-import { signoStore } from "~/stores/signoStore";
-
-const storeSigno = signoStore();
-
-const signos = storeSigno.signos;
+import { signos } from "~/utils/domain/signosArray";
 const props = defineProps({ rota: { type: Function, default: () => {} } });
+const signosa = signos;
 
 onMounted(() => {});
 </script>

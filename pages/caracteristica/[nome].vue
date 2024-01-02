@@ -4,7 +4,7 @@
       <section class="anuncio shadow"><h1>anuncio</h1></section>
       <div class="max-w-4xl mx-auto py-8 px-5 shadow conteudo">
         <h2 class="text-xl font-semibold mb-4">
-          Caracteristicas do signo de {{ signo?.nomeImage }}
+          Caracteristicas do Signo de {{ signo?.nomeImage }}
         </h2>
         <p>{{ signo?.data }}</p>
 
@@ -39,14 +39,15 @@ onMounted(() => {});
   /* background-color: beige; */
   display: flex;
   flex-direction: row;
-  margin-top: 70px;
+  margin-top: 7%;
   min-height: 80vh;
 }
 .conteudo p {
   font-size: 1.6rem;
 }
 .anuncio {
-  display: none;
+  display: block;
+  padding: 5px;
 }
 @media (max-width: 800px) {
   .caixa {

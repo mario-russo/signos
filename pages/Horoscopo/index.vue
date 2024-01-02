@@ -88,6 +88,4 @@ function redirect() {
     width: 350px;
   }
 }
-
-/* Estilos para dispositivos desktop (tamanhos em pixels) */
 </style>

@@ -1,19 +1,23 @@
 <template>
-    <div>
-        <noticiaSignosComponent :signo="signo"/>
-    </div>
+  <div>
+    <noticiaSignosComponent :busca-dto="buscaSigno" titulo="Horóscopo Do Mês" />
+  </div>
 </template>
 
 <script setup lang="ts">
-import { postSigno } from 'utils/types';
+import { signos } from "~/utils/domain/signosArray";
 
+const { id } = useRoute().params;
+const dataInfo = useObterData();
 
-const signo: postSigno = {
-    id: 0,
-    idSigno: 0,
-    nomeDoSignos: 'signo nome ',
-    dataPost: '21/292938/2313',
-    conteudoSigno: 'conteudo do signo aqui '
-}
+const enumSigno = signos.find(
+  (item) => item.id === parseInt(id.toString())
+)?.enum;
+
+const buscaSigno = reactive<apiBuscaSignoTipoReferencia>({
+  referencia: dataInfo.getMonthNumber(),
+  tipo: "MES",
+  signo: enumSigno,
+});
 </script>
 <style scoped></style>

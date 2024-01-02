@@ -1,25 +1,25 @@
 <template>
-    <div>
-        <NoticiaSignosComponent :signo="signo" />
-        <h1>
-            {{ id }}
-        </h1>
-    </div>
+  <div>
+    <NoticiaSignosComponent :buscaDto="buscaDto" titulo="Horóscopo do Ano" />
+  </div>
 </template>
 
 <script setup lang="ts">
-import { postSigno } from 'utils/types';
+import { signos } from "~/utils/domain/signosArray";
 
-const {id} = useRoute().params
-const idpage = parseInt(id.toString())
+const { id } = useRoute().params;
 
-const signo = reactive<postSigno>({
-    id: idpage,
-    idSigno: idpage,
-    nomeDoSignos: 'nome ',
-    dataPost: '02/03/1993',
-    conteudoSigno: 'texto'
-})
+const dataInfo = useObterData();
+
+const enumSigno = signos.find((item) => {
+  return item.id === parseInt(id.toString());
+})?.enum;
+
+const buscaDto = reactive<apiBuscaSignoTipoReferencia>({
+  referencia: dataInfo.getYear(),
+  tipo: "ANO",
+  signo: enumSigno,
+});
 </script>
 
 <style scoped></style>

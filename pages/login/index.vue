@@ -20,7 +20,7 @@
                 >Seu email</label
               >
               <input
-              v-model="user.email"
+                v-model="user.email"
                 type="email"
                 name="email"
                 id="email"
@@ -36,7 +36,7 @@
                 >Senha</label
               >
               <input
-              v-model="user.senha"
+                v-model="user.senha"
                 type="password"
                 name="password"
                 id="password"
@@ -77,27 +77,28 @@ definePageMeta({
 });
 
 let user = {
-  senha:"",
+  senha: "",
   email: "",
 };
 
 async function postData() {
   try {
-    const { data: response } = await useFetch(useRuntimeConfig().public.baseUrl + 'auth/login', {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(user),
-    });
+    const { data: response } = await useFetch(
+      useRuntimeConfig().public.baseUrl + "auth/login",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+      }
+    );
 
     if (!response.value) {
       throw new Error("Erro ao fazer a requisição POST");
     }
 
     const responseData = response;
-
-    console.log(responseData.value);
   } catch (error) {
     console.error("Erro ao fazer a requisição POST:", error);
   }

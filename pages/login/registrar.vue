@@ -97,7 +97,6 @@ async function postData() {
     }
 
     const responseData = await response.json();
-    console.log(responseData);
   } catch (error) {
     console.error("Erro ao fazer a requisição POST:", error);
   }

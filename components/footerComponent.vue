@@ -39,7 +39,7 @@
               <NuxtLink
                 to="/horoscopo/anual"
                 class="text-gray-400 hover:text-gray-200"
-                >Horóscopo 2023</NuxtLink
+                >Horóscopo {{ useObterData().getYear() }}</NuxtLink
               >
             </li>
           </ul>

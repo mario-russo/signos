@@ -19,14 +19,14 @@
       <div class="px-6 py-4 flex col text-center">
         <NuxtLink
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          to="/horoscopo/semanal/1"
           >Horóscopo da Semana
         </NuxtLink>
         <NuxtLink
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          to="/horoscopo/mensal/1"
           >Horóscopo do Mês</NuxtLink
         >
-        <!--
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#Tag3</span> -->
       </div>
     </div>
     <div class="card shadow-lg p-2 mt-5 mb-5">
@@ -48,10 +48,12 @@
       <div class="px-6 py-4 flex col text-center">
         <NuxtLink
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          to="/horoscopo/semanal/2"
           >Horóscopo da Semana
         </NuxtLink>
         <NuxtLink
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          to="/horoscopo/mensal/2"
           >Horóscopo do Mês</NuxtLink
         >
       </div>
@@ -75,10 +77,12 @@
       <div class="px-6 py-4 flex col text-center">
         <NuxtLink
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          to="/horoscopo/semanal/3"
           >Horóscopo da Semana
         </NuxtLink>
         <NuxtLink
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          to="/horoscopo/mensal/3"
           >Horóscopo do Mês</NuxtLink
         >
       </div>
@@ -102,10 +106,12 @@
       <div class="px-6 py-4 flex col text-center">
         <NuxtLink
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          to="/horoscopo/semanal/4"
           >Horóscopo da Semana
         </NuxtLink>
         <NuxtLink
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          to="/horoscopo/mensal/4"
           >Horóscopo do Mês</NuxtLink
         >
       </div>
@@ -129,10 +135,12 @@
       <div class="px-6 py-4 flex col text-center">
         <NuxtLink
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          to="/horoscopo/semanal/5"
           >Horóscopo da Semana
         </NuxtLink>
         <NuxtLink
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          to="/horoscopo/mensal/5"
           >Horóscopo do Mês</NuxtLink
         >
       </div>
@@ -156,10 +164,12 @@
       <div class="px-6 py-4 flex col text-center">
         <NuxtLink
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          to="/horoscopo/semanal/6"
           >Horóscopo da Semana
         </NuxtLink>
         <NuxtLink
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          to="/horoscopo/mensal/6"
           >Horóscopo do Mês</NuxtLink
         >
       </div>
@@ -183,10 +193,12 @@
       <div class="px-6 py-4 flex col text-center">
         <NuxtLink
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          to="/horoscopo/semanal/7"
           >Horóscopo da Semana
         </NuxtLink>
         <NuxtLink
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          to="/horoscopo/mensal/7"
           >Horóscopo do Mês</NuxtLink
         >
       </div>
@@ -210,10 +222,12 @@
       <div class="px-6 py-4 flex col text-center">
         <NuxtLink
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          to="/horoscopo/semanal/8"
           >Horóscopo da Semana
         </NuxtLink>
         <NuxtLink
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          to="/horoscopo/mensal/8"
           >Horóscopo do Mês</NuxtLink
         >
       </div>
@@ -237,10 +251,12 @@
       <div class="px-6 py-4 flex col text-center">
         <NuxtLink
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          to="/horoscopo/semanal/9"
           >Horóscopo da Semana
         </NuxtLink>
         <NuxtLink
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          to="/horoscopo/mensal/9"
           >Horóscopo do Mês</NuxtLink
         >
       </div>
@@ -264,10 +280,12 @@
       <div class="px-6 py-4 flex col text-center">
         <NuxtLink
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          to="/horoscopo/semanal/10"
           >Horóscopo da Semana
         </NuxtLink>
         <NuxtLink
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          to="/horoscopo/mensal/10"
           >Horóscopo do Mês</NuxtLink
         >
       </div>
@@ -291,10 +309,12 @@
       <div class="px-6 py-4 flex col text-center">
         <NuxtLink
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          to="/horoscopo/semanal/11"
           >Horóscopo da Semana
         </NuxtLink>
         <NuxtLink
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          to="/horoscopo/mensal/11"
           >Horóscopo do Mês</NuxtLink
         >
       </div>
@@ -318,10 +338,12 @@
       <div class="px-6 py-4 flex col text-center">
         <NuxtLink
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          to="/horoscopo/semanal/12"
           >Horóscopo da Semana
         </NuxtLink>
         <NuxtLink
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          to="/horoscopo/mensal/12"
           >Horóscopo do Mês</NuxtLink
         >
       </div>

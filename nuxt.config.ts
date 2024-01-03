@@ -7,11 +7,5 @@ export default defineNuxtConfig({
     },
   },
   devtools: { enabled: true },
-  modules: [
-    "@nuxtjs/tailwindcss",
-    "nuxt-icon",
-    "@pinia/nuxt",
-    "@nuxt/image",
-    "@nuxtjs/google-analytics",
-  ],
+  modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@pinia/nuxt", "@nuxt/image"],
 });

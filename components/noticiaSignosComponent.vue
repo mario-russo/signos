@@ -6,8 +6,8 @@
         <div class="">
           <h1 class="">{{ props.titulo }}</h1>
         </div>
-        <p>{{ resultado.signo }}</p>
-        <p>{{ resultado.conteudo }}</p>
+        <p>{{ conteudo.signo }}</p>
+        <p>{{ conteudo.conteudo }}</p>
       </div>
       <div class="anuncio"></div>
     </section>
@@ -20,34 +20,16 @@ const props = defineProps({
   titulo: { type: String },
 });
 
-const resultado = reactive<backend>({
-  id: 0,
-  nome: "",
-  data: "",
-  enum: "",
-});
-async function inicio_pagina() {
-  const { data } = await useFetch<backend>(
-    useRuntimeConfig().public.baseUrl + "conteudo/busca-tudo",
-    { body: props.buscaDto, method: "POST" }
-  );
-  if (data.value === null) {
-    resultado.id = 0;
-    resultado.nome = "";
-    resultado.data = "";
-    resultado.enum = "";
-  } else {
-    resultado.conteudo = data.value.conteudo;
-    resultado.signo = data.value.signo;
-    resultado.id = data.value.id;
-    resultado.nome = data.value.nome;
-    resultado.data = data.value.data;
+const { data: conteudo } = useFetch<backend>(
+  `${useRuntimeConfig().public.baseUrl}conteudo/busca-tudo`,
+  {
+    method: "POST",
+    body: JSON.stringify(props.buscaDto),
+    headers: {
+      "Content-Type": "application/json",
+    },
   }
-}
-
-onMounted(async () => {
-  await inicio_pagina();
-});
+);
 </script>
 
 <style scoped>

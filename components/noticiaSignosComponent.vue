@@ -2,13 +2,13 @@
   <div class="caixa">
     <section class="grid">
       <div class="anuncio"></div>
-      <div class="conteudo">
-        <div class="">
+      <main class="conteudo">
+        <header class="">
           <h1 class="">{{ props.titulo }}</h1>
-        </div>
-        <p>{{ conteudo.signo }}</p>
-        <p>{{ conteudo.conteudo }}</p>
-      </div>
+        </header>
+        <section v-html="conteudo.signo"></section>
+        <section v-html="conteudo.conteudo"></section>
+      </main>
       <div class="anuncio"></div>
     </section>
   </div>

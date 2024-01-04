@@ -12,7 +12,7 @@ useHead({
   meta: [
     {
       name: "google-site-verification",
-      content: "1-DbJE0W7JuHHbXVtFOsSTxIBCBSTHYv1oFv-qMsIS",
+      content: "1-DbJE0W7JuHHbXVtFOsSTxIBCBSTHYv1oFv-qMsISO",
     },
   ],
 });

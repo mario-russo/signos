@@ -7,6 +7,15 @@
 </template>
 
 <script setup lang="ts">
+useHead({
+  title: "Mundo Astral",
+  meta: [
+    {
+      name: "google-site-verification",
+      content: "1-DbJE0W7JuHHbXVtFOsSTxIBCBSTHYv1oFv-qMsIS",
+    },
+  ],
+});
 interface signosArray {
   id: number;
   name: string;

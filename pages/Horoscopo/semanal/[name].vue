@@ -1,7 +1,12 @@
 <template>
-  <div>
+  <div class="">
+    <div v-if="pending">
+      <LoadingComponent></LoadingComponent>
+    </div>
     <noticiaSignosComponent
-      :busca-dto="apiBusca"
+      v-else
+      :signo="busca.signo"
+      :conteudo="busca.conteudo"
       :titulo="`Horóscopo da Semana ${signo?.nome}`"
     ></noticiaSignosComponent>
   </div>
@@ -15,14 +20,27 @@ const dataInfo = useObterData();
 
 const signo = useSignos().getSigno.value("nameParms", name);
 
-const apiBusca: apiBuscaSignoTipoReferencia =
-  reactive<apiBuscaSignoTipoReferencia>({
-    referencia: dataInfo.getWeekNumber(),
-    signo: signo?.enum,
-    tipo: "SEMANA",
-  });
+const apiBusca = reactive({
+  referencia: dataInfo.getWeekNumber(),
+  signo: signo?.enum,
+  tipo: "SEMANA",
+});
 
-onMounted(async () => {});
+const { data: busca, pending } = useFetch(
+  `${useRuntimeConfig().public.baseUrl}conteudo/busca-tudo`,
+  {
+    method: "POST",
+    body: JSON.stringify(apiBusca),
+    headers: {
+      "Content-Type": "application/json",
+    },
+    lazy: false,
+  }
+);
 </script>
 
-<style scoped></style>
+<style scoped>
+.page {
+  min-height: 80vh;
+}
+</style>

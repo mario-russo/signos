@@ -6,8 +6,8 @@
         <header class="">
           <h1 class="text-center mb-5">{{ props.titulo }}</h1>
         </header>
-        <section v-html="signo.signo"></section>
-        <section v-html="signo.conteudo"></section>
+        <section v-html="signo"></section>
+        <section v-html="conteudo"></section>
       </main>
       <div class="anuncio"></div>
     </section>
@@ -16,20 +16,21 @@
 
 <script setup lang="ts">
 const props = defineProps({
-  buscaDto: { type: Object },
+  conteudo: { type: String },
+  signo: { type: String },
   titulo: { type: String },
 });
 
-const { data: signo } = useFetch<backend | any>(
-  `${useRuntimeConfig().public.baseUrl}conteudo/busca-tudo`,
-  {
-    method: "POST",
-    body: JSON.stringify(props.buscaDto),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  }
-);
+// const { data: signo } = useFetch<backend | any>(
+//   `${useRuntimeConfig().public.baseUrl}conteudo/busca-tudo`,
+//   {
+//     method: "POST",
+//     body: JSON.stringify(props.buscaDto),
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//   }
+// );
 </script>
 
 <style scoped>

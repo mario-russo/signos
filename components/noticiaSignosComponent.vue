@@ -6,8 +6,8 @@
         <header class="">
           <h1 class="text-center mb-5">{{ props.titulo }}</h1>
         </header>
-        <section v-html="conteudo.signo"></section>
-        <section v-html="conteudo.conteudo"></section>
+        <section v-html="signo.signo"></section>
+        <section v-html="signo.conteudo"></section>
       </main>
       <div class="anuncio"></div>
     </section>
@@ -20,7 +20,7 @@ const props = defineProps({
   titulo: { type: String },
 });
 
-const { data: conteudo } = useFetch<backend>(
+const signo = await useFetch<backend | any>(
   `${useRuntimeConfig().public.baseUrl}conteudo/busca-tudo`,
   {
     method: "POST",

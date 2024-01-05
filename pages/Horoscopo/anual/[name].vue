@@ -6,8 +6,8 @@
     />
   </div>
 </template>
-
 <script setup lang="ts">
+import { useSignos } from "~/composables/useSignos";
 const { name } = useRoute().params;
 
 const dataInfo = useObterData();

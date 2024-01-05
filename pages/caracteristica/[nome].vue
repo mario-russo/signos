@@ -24,10 +24,7 @@ import { signoStore } from "~/stores/signoStore";
 const { nome } = useRoute().params;
 const signo = signoStore().nome(nome);
 
-onMounted(() => {
-  console.log(signo);
-  console.log(nome);
-});
+onMounted(() => {});
 </script>
 
 <style scoped>

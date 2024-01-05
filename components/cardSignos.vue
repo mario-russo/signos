@@ -26,7 +26,6 @@
 <script setup lang="ts">
 const signos = useSignos().signos;
 const props = defineProps({ rota: { type: Function, default: () => {} } });
-// const signosa = signos;
 
 onMounted(() => {});
 </script>

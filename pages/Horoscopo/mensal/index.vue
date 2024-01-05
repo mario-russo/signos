@@ -1,6 +1,6 @@
 <script setup lang="ts">
-function redirect(id: number) {
-  useRouter().push("/horoscopo/mensal/" + id);
+function redirect(nome: string) {
+  useRouter().push("/horoscopo/mensal/" + nome);
 }
 </script>
 <template>

@@ -5,8 +5,10 @@
 </template>
 
 <script setup lang="ts">
-function redirectPath(signo: number) {
-  useRouter().push({ path: "/horoscopo/anual/" + signo });
+function redirectPath(nome: string) {
+  useRouter().push({
+    path: "/horoscopo/anual/" + nome,
+  });
 }
 </script>
 

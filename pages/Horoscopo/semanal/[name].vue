@@ -2,25 +2,21 @@
   <div>
     <noticiaSignosComponent
       :busca-dto="apiBusca"
-      titulo="Horóscopo da Semana"
+      :titulo="`Horóscopo da Semana ${signo?.nome}`"
     ></noticiaSignosComponent>
   </div>
 </template>
 
 <script setup lang="ts">
-import { signos } from "~/utils/domain/signosArray";
-
-const { id } = useRoute().params;
+const { name } = useRoute().params;
 const dataInfo = useObterData();
 
-const enumSigno = signos.find(
-  (item) => item.id === parseInt(id.toString())
-)?.enum;
+const signo = useSignos().getSigno.value("nameParms", name);
 
 const apiBusca: apiBuscaSignoTipoReferencia =
   reactive<apiBuscaSignoTipoReferencia>({
     referencia: dataInfo.getWeekNumber(),
-    signo: enumSigno,
+    signo: signo?.enum,
     tipo: "SEMANA",
   });
 

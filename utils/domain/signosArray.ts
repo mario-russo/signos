@@ -1,11 +1,26 @@
 import type { backend } from "~/utils/types";
 
-export const signos: backend[] = [
-  { id: 1, nome: "Aries", data: "21/03 - 19/04", enum: "ARIES", conteudo: "" },
-  { id: 2, nome: "Touro", data: "20/04 - 20/05", enum: "TOURO", conteudo: "" },
+export const ArrayDosSignos: backend[] = [
+  {
+    id: 1,
+    nome: "Aries",
+    nameParms: "aries",
+    data: "21/03 - 19/04",
+    enum: "ARIES",
+    conteudo: "",
+  },
+  {
+    id: 2,
+    nome: "Touro",
+    nameParms: "touro",
+    data: "20/04 - 20/05",
+    enum: "TOURO",
+    conteudo: "",
+  },
   {
     id: 3,
     nome: "Gêmeos",
+    nameParms: "gemeos",
     data: "21/05 - 20/06",
     enum: "GEMEOS",
     conteudo: "",
@@ -13,22 +28,40 @@ export const signos: backend[] = [
   {
     id: 4,
     nome: "Cancer",
+
+    nameParms: "cancer",
     data: "21/06 - 22/07",
     enum: "CANCER",
     conteudo: "",
   },
-  { id: 5, nome: "Leão", data: "23/07 - 22/08", enum: "LEAO", conteudo: "" },
+  {
+    id: 5,
+    nome: "Leão",
+    nameParms: "leao",
+    data: "23/07 - 22/08",
+    enum: "LEAO",
+    conteudo: "",
+  },
   {
     id: 6,
     nome: "Virgem",
+    nameParms: "virgem",
     data: "23/08 - 22/09",
     enum: "VIRGEM",
     conteudo: "",
   },
-  { id: 7, nome: "Libra", data: "23/09 - 22/10", enum: "LIBRA", conteudo: "" },
+  {
+    id: 7,
+    nome: "Libra",
+    nameParms: "libra",
+    data: "23/09 - 22/10",
+    enum: "LIBRA",
+    conteudo: "",
+  },
   {
     id: 8,
     nome: "Escorpião",
+    nameParms: "escorpiao",
     data: "23/10 - 21/11",
     enum: "ESCORPIAO",
     conteudo: "",
@@ -36,6 +69,7 @@ export const signos: backend[] = [
   {
     id: 9,
     nome: "Sagitário",
+    nameParms: "sagitario",
     data: "22/11 - 21/12",
     enum: "SAGITARIO",
     conteudo: "",
@@ -43,6 +77,7 @@ export const signos: backend[] = [
   {
     id: 10,
     nome: "Capricórnio",
+    nameParms: "capricornio",
     data: "22/12 - 19/01",
     enum: "CAPRICONIO",
     conteudo: "",
@@ -50,6 +85,7 @@ export const signos: backend[] = [
   {
     id: 11,
     nome: "Aquário",
+    nameParms: "aquario",
     data: "20/01 - 18/02",
     enum: "AQUARIO",
     conteudo: "",
@@ -57,6 +93,7 @@ export const signos: backend[] = [
   {
     id: 12,
     nome: "Peixes",
+    nameParms: "peixes",
     data: "19/02 - 20/03",
     enum: "PEIXES",
     conteudo: "",

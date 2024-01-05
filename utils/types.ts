@@ -21,6 +21,7 @@ export interface backend {
   nome: string;
   data: string;
   enum: string;
+  nameParms: string;
   conteudo?: string;
   signo?: string;
 }

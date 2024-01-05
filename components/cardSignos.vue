@@ -3,7 +3,7 @@
     <div class="text-center">
       <section class="grid-card">
         <section
-          v-for="signo in signosa"
+          v-for="signo in signos"
           :key="signo.id"
           class="shadow p-2 card"
           @click=""
@@ -14,7 +14,7 @@
           <p class="mb-5">{{ signo.data }}</p>
           <NuxtLink
             class="cursor-pointer text-white bg-teal-400 font-bold shadow py-1 px-8 mb-5 rounded"
-            @click="props.rota(signo.id)"
+            @click="props.rota(signo.nameParms)"
             >Ver</NuxtLink
           >
         </section>
@@ -24,9 +24,9 @@
 </template>
 
 <script setup lang="ts">
-import { signos } from "~/utils/domain/signosArray";
+const signos = useSignos().signos;
 const props = defineProps({ rota: { type: Function, default: () => {} } });
-const signosa = signos;
+// const signosa = signos;
 
 onMounted(() => {});
 </script>

@@ -20,7 +20,7 @@ const props = defineProps({
   titulo: { type: String },
 });
 
-const signo = await useFetch<backend | any>(
+const signo = useFetch<backend | any>(
   `${useRuntimeConfig().public.baseUrl}conteudo/busca-tudo`,
   {
     method: "POST",

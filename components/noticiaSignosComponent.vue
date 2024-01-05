@@ -4,7 +4,7 @@
       <div class="anuncio"></div>
       <main class="conteudo">
         <header class="">
-          <h1 class="">{{ props.titulo }}</h1>
+          <h1 class="text-center mb-5">{{ props.titulo }}</h1>
         </header>
         <section v-html="conteudo.signo"></section>
         <section v-html="conteudo.conteudo"></section>
@@ -33,17 +33,17 @@ const { data: conteudo } = useFetch<backend>(
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("~/assets/css/tamanhoFonte.css");
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 .caixa {
   min-height: 85vh;
-  font-size: 1.4rem;
   width: 100%;
   box-sizing: border-box;
   margin: auto;
-}
-.caixa h1 {
-  font-size: 1.8rem !important;
-  font-weight: 600;
-  margin-bottom: 2rem;
 }
 .grid {
   padding-top: 7%;
@@ -54,8 +54,16 @@ const { data: conteudo } = useFetch<backend>(
 .conteudo {
   padding: 20px;
   display: flex;
-  width: 50%;
+  width: 60%;
   flex-direction: column;
+}
+.conteudo p {
+  line-height: 1.7rem;
+  margin: 1rem 0;
+  text-align: justify;
+}
+.conteudo h2 {
+  font-weight: 500;
 }
 .anuncio {
   padding: 20px;

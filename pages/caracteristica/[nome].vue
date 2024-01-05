@@ -1,8 +1,7 @@
 <template>
   <div class="p-5">
     <section class="grid caixa">
-      <section class="anuncio shadow"><h1>anuncio</h1></section>
-      <div class="max-w-4xl mx-auto py-8 px-5 shadow conteudo">
+      <div class="max-w-4xl mx-auto py-8 px-5 conteudo">
         <h2 class="text-xl font-semibold mb-4">
           Caracteristicas do Signo de {{ signo?.nomeImage }}
         </h2>
@@ -15,10 +14,6 @@
           {{ caracteristica }}
         </p>
       </div>
-      <div class="anuncio shadow">
-        <h2>Seção de Anúncio</h2>
-        <p>Anúncio aqui.</p>
-      </div>
     </section>
   </div>
 </template>
@@ -27,16 +22,17 @@
 import { signoStore } from "~/stores/signoStore";
 
 const { nome } = useRoute().params;
-const id = parseInt(nome.toString());
-const signo = signoStore().getBySignoId(id);
+const signo = signoStore().nome(nome);
 
-onMounted(() => {});
+onMounted(() => {
+  console.log(signo);
+  console.log(nome);
+});
 </script>
 
 <style scoped>
 @import url("~/assets/css/tamanhoFonte.css");
 .caixa {
-  /* background-color: beige; */
   display: flex;
   flex-direction: row;
   margin-top: 7%;

@@ -1,3 +1,11 @@
+<script>
+useHead({
+  meta: [
+    { name: "google-adsense-account", content: "ca-pub-2885282252818507" },
+  ],
+});
+</script>
+
 <template>
   <section class="corpo">
     <header>

@@ -2,6 +2,21 @@
 function redirect() {
   useRouter().push({ path: "/horoscopo/anual" });
 }
+useHead({
+  title: "Mundo Astral | Semanal, Mensal, Anual",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Descubra o que os astros têm reservado para você nesta semana. Esteja pronto para abraçar oportunidades, superar desafios e manifestar o seu potencial máximo. Deixe-se guiar pelas estrelas com o horóscopo semanal, iluminando seu caminho rumo ao sucesso e à realização pessoal.l",
+    },
+    {
+      name: "keywords",
+      content:
+        "horóscopo, previsões, astrologia, semana, estrelas, oportunidades, desafios, sucesso, realização pessoal",
+    },
+  ],
+});
 </script>
 <template>
   <div class="conteudo flex-column mx-auto items-center container">

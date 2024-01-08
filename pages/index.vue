@@ -14,6 +14,16 @@ useHead({
       name: "google-site-verification",
       content: "1-DbJE0W7JuHHbXVtFOsSTxIBCBSTHYv1oFv-qMsISO",
     },
+    {
+      name: "description",
+      content:
+        "Descubra o que os astros têm reservado para você nesta semana. Esteja pronto para abraçar oportunidades, superar desafios e manifestar o seu potencial máximo. Deixe-se guiar pelas estrelas com o horóscopo semanal, iluminando seu caminho rumo ao sucesso e à realização pessoal.l",
+    },
+    {
+      name: "keywords",
+      content:
+        "horóscopo, previsões, astrologia, semana, estrelas, oportunidades, desafios, sucesso, realização pessoal",
+    },
   ],
 });
 interface signosArray {

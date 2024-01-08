@@ -1,42 +1,33 @@
 <template>
   <div class="">
-    <div v-if="pending">
-      <LoadingComponent></LoadingComponent>
-    </div>
     <noticiaSignosComponent
-      v-else
-      :signo="busca.signo"
-      :conteudo="busca.conteudo"
-      :titulo="`Horóscopo da Semana ${signo?.nome}`"
+      :semana="semana"
+      :titulo-da-page="`Horóscopo da semana de ${semana?.nomeDoSigno}`"
     ></noticiaSignosComponent>
   </div>
 </template>
 
 <script setup lang="ts">
-import { useSignos } from "~/composables/useSignos";
-
+import { useSignoDaSemana } from "./dados";
 const { name } = useRoute().params;
 const dataInfo = useObterData();
-
-const signo = useSignos().getSigno.value("nameParms", name);
-
-const apiBusca = reactive({
-  referencia: dataInfo.getWeekNumber(),
-  signo: signo?.enum,
-  tipo: "SEMANA",
-});
-
-const { data: busca, pending } = useFetch(
-  `${useRuntimeConfig().public.baseUrl}conteudo/busca-tudo`,
-  {
-    method: "POST",
-    body: JSON.stringify(apiBusca),
-    headers: {
-      "Content-Type": "application/json",
-    },
-    lazy: false,
-  }
+const semana = useSignoDaSemana().getSigno.value(
+  dataInfo.getWeekNumber(),
+  name
 );
+useHead({
+  title: `Horóscopo Semanal para ${semana?.nomeDoSigno} | Saiba o que esperar do amor, do trabalho e da saúde neste ano. Leia o nosso blog e fique por dentro das novidades."`,
+  meta: [
+    {
+      name: "description",
+      content: `Confira as previsões semanais para ${semana?.nomeDoSigno}, e descubra o que os astros reservam para você nesta semana, antecipe-se aos acontecimentos da semana com a astrologia.`,
+    },
+    {
+      name: "keywords",
+      content: `horóscopo semanal, ${semana?.nomeDoSigno}, previsões semanais, astrologia`,
+    },
+  ],
+});
 </script>
 
 <style scoped>

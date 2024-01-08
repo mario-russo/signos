@@ -3,11 +3,13 @@
     <section class="grid">
       <div class="anuncio"></div>
       <main class="conteudo">
-        <header class="">
-          <h1 class="text-center mb-5">{{ props.titulo }}</h1>
+        <header class="mb-10">
+          <h1 class="">{{ tituloDaPage }}</h1>
         </header>
-        <section v-html="signo"></section>
-        <section v-html="conteudo"></section>
+        <section v-for="conteudo in semana?.conteudo" :key="conteudo.titulo">
+          <h2 class="">{{ conteudo.titulo }}</h2>
+          <p class="">{{ conteudo.conteudo }}</p>
+        </section>
       </main>
       <div class="anuncio"></div>
     </section>
@@ -15,22 +17,13 @@
 </template>
 
 <script setup lang="ts">
+import type { typeSemana } from "~/pages/Horoscopo/semanal/dados/types";
 const props = defineProps({
-  conteudo: { type: String },
-  signo: { type: String },
-  titulo: { type: String },
+  semana: {
+    type: Object as () => typeSemana,
+  },
+  tituloDaPage: { type: String },
 });
-
-// const { data: signo } = useFetch<backend | any>(
-//   `${useRuntimeConfig().public.baseUrl}conteudo/busca-tudo`,
-//   {
-//     method: "POST",
-//     body: JSON.stringify(props.buscaDto),
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//   }
-// );
 </script>
 
 <style scoped>
@@ -58,12 +51,12 @@ const props = defineProps({
   width: 60%;
   flex-direction: column;
 }
-.conteudo p {
+.conteudo section p {
   line-height: 1.7rem;
-  margin: 1rem 0;
+  margin: 1.2rem 0;
   text-align: justify;
 }
-.conteudo h2 {
+.conteudo section h2 {
   font-weight: 500;
 }
 .anuncio {

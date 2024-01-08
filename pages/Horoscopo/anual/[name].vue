@@ -1,23 +1,30 @@
 <template>
   <div>
     <NoticiaSignosComponent
-      :buscaDto="buscaDto"
-      :titulo="`Horóscopo do Ano ${signo?.nome}`"
+      :semana="signo"
+      :titulo-da-page="`Previsões para ${signo?.nomeDoSigno} - 2024`"
     />
   </div>
 </template>
 <script setup lang="ts">
-import { useSignos } from "~/composables/useSignos";
-const { name } = useRoute().params;
+import { useSignoDoAno } from "./dados";
 
+const { name } = useRoute().params;
 const dataInfo = useObterData();
 
-const signo = useSignos().getSigno.value("nameParms", name);
-
-const buscaDto = reactive<apiBuscaSignoTipoReferencia>({
-  referencia: dataInfo.getYear(),
-  tipo: "ANO",
-  signo: signo?.enum,
+const signo = useSignoDoAno().getSigno.value(dataInfo.getYear(), name);
+useHead({
+  title: `Mundo Astral | Previsões Astrológicas ${signo?.nomeDoSigno}`,
+  meta: [
+    {
+      name: "description",
+      content: `Previsões astrológicas para o ${signo?.nomeDoSigno} em 2024. Saiba o que os astros reservam para o seu signo ao longo do ano. Amor, carreira, saúde, finanças e espiritualidade.`,
+    },
+    {
+      name: "keywords",
+      content: `horóscopo, previsões, astrologia, 2024, ${signo?.nomeDoSigno}, amor, carreira, saúde, finanças, espiritualidade`,
+    },
+  ],
 });
 </script>
 

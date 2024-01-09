@@ -14,5 +14,18 @@ export default defineNuxtConfig({
     },
   },
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@pinia/nuxt", "@nuxt/image"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "nuxt-icon",
+    "@pinia/nuxt",
+    "@nuxt/image",
+    "@nuxtjs/sitemap",
+    "nuxt-simple-robots",
+  ],
+  site: {
+    url: "https://mundoastral.com.br/",
+  },
+  sitemap: {
+    exclude: ["/**/dados"], // this won't work
+  },
 });

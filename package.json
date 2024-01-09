@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/sitemap": "^5.0.1",
     "@nuxtjs/tailwindcss": "^6.10.1",
     "@types/node": "^18.16.19",
     "@vitejs/plugin-vue": "^4.2.3",
